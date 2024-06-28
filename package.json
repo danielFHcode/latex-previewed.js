@@ -1,0 +1,22 @@
+{
+    "name": "1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"nodemon --watch src --exec pdflatex src/index.tex --output-directory dist\" \"nodemon index.js --watch index.js\"",
+        "build": "pdflatex src/index.tex --output-directory dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@previewed/plugin-pdf": "1.1.0-alpha.0",
+        "@previewed/plugin-watch": "1.1.0-alpha.0",
+        "concurrently": "^8.2.2",
+        "nodemon": "^3.1.4",
+        "previewed": "1.1.0-alpha.0"
+    }
+}
